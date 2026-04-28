@@ -1,0 +1,16 @@
+# rpmbuild artefacts (when developers build locally in this dir)
+*.rpm
+*.src.rpm
+BUILD/
+BUILDROOT/
+RPMS/
+SRPMS/
+
+# upstream payload — never committed; spectool fetches it
+*.deb
+OpenWebStart_*.deb
+
+# editor noise
+*.swp
+*~
+.DS_Store

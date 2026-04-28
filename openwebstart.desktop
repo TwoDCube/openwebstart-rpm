@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=OpenWebStart
+Comment=Open Java Web Start (.jnlp) files
+Exec=/opt/OpenWebStart/javaws %f
+Icon=/opt/OpenWebStart/Icon-512.png
+Terminal=false
+NoDisplay=true
+MimeType=application/x-java-jnlp-file;
+Categories=Network;Java;

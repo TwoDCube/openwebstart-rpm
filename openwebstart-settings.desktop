@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=OpenWebStart Settings
+Comment=Configure OpenWebStart deployment, proxy and JRE selection
+Exec=/opt/OpenWebStart/itw-settings
+Icon=/opt/OpenWebStart/Icon-512.png
+Terminal=false
+Categories=Network;Settings;Java;
