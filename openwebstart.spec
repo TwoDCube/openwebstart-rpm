@@ -8,7 +8,7 @@
 # OpenWebStart from downloading the main viewer jar.
 
 %global oo_path /opt/OpenWebStart
-%global deb_underscored 1_13_0
+%global deb_underscored 1_14_0
 
 # Skip RPM's default build-post processing for binary repacks: no debug
 # extraction, no strip (binaries are already stripped by upstream), no
@@ -21,8 +21,8 @@
 AutoReqProv: no
 
 Name:           openwebstart
-Version:        1.13.0
-Release:        2%{?dist}
+Version:        1.14.0
+Release:        1%{?dist}
 Summary:        Java Web Start replacement that opens .jnlp files
 
 License:        GPL-2.0-only WITH Classpath-exception-2.0
@@ -107,6 +107,9 @@ update-desktop-database  %{_datadir}/applications &>/dev/null || :
 %{_datadir}/mime/packages/openwebstart.xml
 
 %changelog
+* Mon Jul 06 2026 Zoltan Szepesi <2dcube01@gmail.com> - 1.14.0-1
+- Update to upstream OpenWebStart 1.14.0
+
 * Wed Apr 29 2026 Zoltan Szepesi <2dcube01@gmail.com> - 1.13.0-2
 - Add javaws wrapper that injects -Dhttp.keepAlive=false to work around
   a Dell iDRAC 7/8 HTTPS keep-alive bug which otherwise prevents the
