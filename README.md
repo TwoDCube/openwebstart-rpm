@@ -19,8 +19,6 @@ sudo dnf copr enable twodcube/openwebstart
 sudo dnf install openwebstart
 ```
 
-(Adjust the COPR project name to match wherever this repo's COPR lives.)
-
 If you have `icedtea-web` installed, dnf will offer to remove it — both
 ship `/usr/bin/javaws`, and `icedtea-web` is unmaintained on Java 25+
 anyway.
