@@ -7,8 +7,8 @@ files (notably Dell iDRAC virtual consoles, older Oracle apps, etc.).
 This is a **binary repack** of the upstream `.deb` release published by
 [Karakun AG](https://karakun.com/) at the
 [karakun/OpenWebStart](https://github.com/karakun/OpenWebStart) repository.
-A bundled Adoptium Temurin 8 JRE ships with the package, so OpenWebStart
-operates independently of the system Java version.
+A bundled Adoptium Temurin 11 runtime ships with the package, so
+OpenWebStart operates independently of the system Java version.
 
 ## Install
 
@@ -27,7 +27,7 @@ anyway.
 
 | Path | Description |
 |---|---|
-| `/opt/OpenWebStart/` | Upstream payload, including bundled JRE 8 |
+| `/opt/OpenWebStart/` | Upstream payload, including bundled Temurin 11 runtime |
 | `/usr/bin/javaws` | Wrapper that fixes the iDRAC keep-alive bug, then execs the real javaws |
 | `/usr/bin/itw-settings` | OpenWebStart Control Panel (deployment.properties UI) |
 | `/usr/share/applications/openwebstart.desktop` | MIME handler for `application/x-java-jnlp-file` |
