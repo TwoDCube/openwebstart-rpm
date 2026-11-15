@@ -1,6 +1,6 @@
 # Binary repack of upstream OpenWebStart .deb. The package ships its own
-# bundled Adoptium JRE 8 under %{oo_path}/jre, so the host's Java version
-# (or absence thereof) is irrelevant.
+# bundled Adoptium Temurin 11 runtime under %{oo_path}/jre, so the host's
+# Java version (or absence thereof) is irrelevant.
 #
 # A small wrapper around the upstream `javaws` binary (Source4) injects
 # -Dhttp.keepAlive=false into the JNLP runtime's command line, working
@@ -8,7 +8,7 @@
 # OpenWebStart from downloading the main viewer jar.
 
 %global oo_path /opt/OpenWebStart
-%global deb_underscored 1_14_0
+%global deb_underscored 1_14_1
 
 # Skip RPM's default build-post processing for binary repacks: no debug
 # extraction, no strip (binaries are already stripped by upstream), no
@@ -21,7 +21,7 @@
 AutoReqProv: no
 
 Name:           openwebstart
-Version:        1.14.0
+Version:        1.14.1
 Release:        1%{?dist}
 Summary:        Java Web Start replacement that opens .jnlp files
 
@@ -50,8 +50,8 @@ Provides:       javaws
 OpenWebStart is an open-source replacement for Oracle Java Web Start, which
 was removed from the JDK in version 11. It opens .jnlp files and supports
 deployment.properties, signed-jar handling, proxy configuration, and per-app
-JRE selection. A bundled Adoptium Temurin 8 JRE is shipped, so OpenWebStart
-operates independently of the system Java.
+JRE selection. A bundled Adoptium Temurin 11 runtime is shipped, so
+OpenWebStart operates independently of the system Java.
 
 This package is a binary repack of the upstream .deb release at
 https://github.com/karakun/OpenWebStart, with a small wrapper around the
@@ -107,6 +107,10 @@ update-desktop-database  %{_datadir}/applications &>/dev/null || :
 %{_datadir}/mime/packages/openwebstart.xml
 
 %changelog
+* Sun Nov 15 2026 Zoltan Szepesi <2dcube01@gmail.com> - 1.14.1-1
+- Update to upstream OpenWebStart 1.14.1 (bundled JRE 11.0.33; blocks the
+  compromised eMudhra intermediate CA certificates)
+
 * Mon Jul 06 2026 Zoltan Szepesi <2dcube01@gmail.com> - 1.14.0-1
 - Update to upstream OpenWebStart 1.14.0
 
